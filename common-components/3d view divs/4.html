@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 100px auto;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 0 0 1em 1em;
+            perspective: 600px;
+            box-shadow:
+                0 0.125em 0.3125em rgba(0, 0, 0, 0.25),
+                0 0.02125em 0.06125em rgba(0, 0, 0, 0.25);
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            border-radius: 0 0 1em 1em;
+    width: 100%;
+    height: 100%;
+    transform-origin: center top;
+    transform: rotateX(180deg);
+    background: #333232
+      linear-gradient(180deg,
+                      rgba(0, 0, 0, 0.1) 50%,
+                      rgba(0, 0, 0, 0.4));
+    transition: 0.7s ease-in-out transform;
+        }
+        &:hover::before {
+    transform: rotateX(0);
+  }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

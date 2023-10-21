@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transform:
+    perspective(800px)
+    rotateY(25deg) scale(0.9)
+    rotateX(10deg);
+            transform-origin: 50% 100%;
+            transform-style: preserve-3d;
+            box-shadow: 1rem 1rem 2rem rgba(0,0,0,.25);
+            filter: blur(2px);
+  opacity: 0.5;
+  transition: 0.6s ease all;
+            margin: 50px auto;
+            &:hover {
+    transform:
+      perspective(800px)
+      rotateY(-15deg)
+      translateY(-50px)
+      rotateX(10deg)
+      scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
