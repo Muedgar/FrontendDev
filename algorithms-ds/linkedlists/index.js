@@ -13,13 +13,57 @@ class Node {
     }
 
     getNextNode() {
-        if (this.next) this.next
+       return this.next
     }
 }
 
 class SinglyLinkedList {
     // 5 hard methods
+    constructor(node) {
+        this.head = node
+    }
+
+    addNodeToHead(node) {
+         const temp = this.head
+         this.head = node
+         node.setNextNode(temp)
+    }
+
+    printList() {
+        let currNode = this.head
+        let output = ""
+        while(currNode.getNextNode()!==null) {
+            output += currNode.data + " -> "
+            currNode = currNode.getNextNode()
+        }
+        console.log(output, currNode.data)
+    }
+
+    addNodeToTail(node) {
+        let currNode = this.head
+        while(currNode.getNextNode()!==null) {
+            currNode = currNode.getNextNode()
+        }
+        currNode.setNextNode(node)
+    }
+
+    removeNthNode() {
+        
+    }
+
+    reverseList() {
+
+    }
+
 }
+
+const list = new SinglyLinkedList(new Node(1))
+
+list.addNodeToTail(new Node(2))
+list.addNodeToTail(new Node(3))
+list.addNodeToTail(new Node(4))
+
+list.printList()
 
 class DoublyLinkedList {
     // 5 hard methods
