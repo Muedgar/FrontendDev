@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Space Shuttle Drawing with Canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+
+        // Main body
+        ctx.beginPath();
+        ctx.moveTo(150, 300);
+        ctx.lineTo(250, 300);
+        ctx.lineTo(200, 200);
+        ctx.closePath();
+        ctx.fillStyle = '#999'; // Gray color
+        ctx.fill();
+        ctx.stroke();
+
+        // Tail fin
+        ctx.beginPath();
+        ctx.moveTo(200, 200);
+        ctx.lineTo(220, 150);
+        ctx.lineTo(180, 150);
+        ctx.closePath();
+        ctx.fillStyle = '#999'; // Same gray color
+        ctx.fill();
+        ctx.stroke();
+
+        // Wings
+        ctx.beginPath();
+        ctx.moveTo(150, 300);
+        ctx.lineTo(100, 350);
+        ctx.lineTo(150, 350);
+        ctx.closePath();
+        ctx.moveTo(250, 300);
+        ctx.lineTo(300, 350);
+        ctx.lineTo(250, 350);
+        ctx.closePath();
+        ctx.fillStyle = '#999'; // Same gray color
+        ctx.fill();
+        ctx.stroke();
+
+        // Window
+        ctx.beginPath();
+        ctx.arc(200, 250, 15, 0, Math.PI * 2, true);
+        ctx.fillStyle = 'blue';
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+</html>

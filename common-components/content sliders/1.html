@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  .container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.turbo {
+    width: 130px;
+    height: fit-content;
+    padding: 0 20px;
+    border-radius: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    margin-top: 10px;
+    transition: width 0.3s ease-in;
+    z-index: 1000;
+    position: relative;
+}
+
+.turbo:hover {
+    background-color: rgb(214, 212, 212);
+    border: 1px solid rgba(180, 180, 180, 0.515);
+}
+
+
+
+.turbo div:nth-child(3) {
+    position: absolute;
+    right: 20px;  
+    transform: rotate(90deg);
+}
+.turbo div {
+  transition: all .4s ease-in;
+}
+
+.turbo div:nth-child(3) {
+  opacity: 0; 
+}
+.turbo div:nth-child(2) {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.turbo:hover div {
+  transform: scale(1.1);
+  margin-left: 7px;
+}
+
+.turbo.active {
+  width: 350px;
+  box-shadow: 5px 21px 47px -21px rgba(0,0,0,0.75);
+  
+  position: relative;
+}
+
+
+.turbo.active div:nth-child(3) {
+  opacity: 1; 
+  position: absolute;
+  right: 20px;  
+  transform: rotate(90deg);
+}
+
+.turbo-info {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 500px;
+  background-color: rgb(0, 0, 0);
+  animation: turbo-anim .75s ease-in 1;
+}
+
+@keyframes turbo-anim {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+
+  50% {
+    top: 50px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="turbo">
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                    <p class="roboto-regular">turbotax</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+            </div>
+    
+    
+            <div class="turbo">
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                    <p class="roboto-regular">turbotax</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+            </div>
+    
+    
+            <div class="turbo">
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                    <p class="roboto-regular">turbotax</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+            </div>
+    
+    
+            <div class="turbo">
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                    <p class="roboto-regular">turbotax</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+            </div>
+        </div>
+        <div class="turbo-info"><p style="color: white; margin-left: 50%;">1</p></div>
+        <div class="turbo-info"><p style="color: white; margin-left: 50%;">2</p></div>
+        <div class="turbo-info"><p style="color: white; margin-left: 50%;">3</p></div>
+        <div class="turbo-info"><p style="color: white; margin-left: 50%;">4</p></div>
+    </div>
+    <script>
+        var turbos = document.querySelectorAll(".turbo")
+        var turbo_info = document.querySelectorAll(".turbo-info")
+        console.log(turbos[0])
+        turbo_info.forEach((d) => {
+            d.style.display = "none"
+        })
+        turbos[0].classList.add('active')
+        turbo_info[0].style.display = "block"
+
+        // turbos[0].click()
+        turbos.forEach((d,i) => {
+            d.addEventListener('click', () => {
+                turbos.forEach((k,j) => {
+                    if(i===j) {
+                        k.classList.add('active')
+                        turbo_info[j].style.display = "block"
+                    }else {
+                        k.classList.remove('active')
+                        turbo_info[j].style.display = "none"
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
